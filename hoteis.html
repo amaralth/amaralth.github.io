@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <title>Hotéis</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg fixed-top">
+		<div class="container">
+			<a class="navbar-brand me-auto" href="index.html">
+				<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 20 20" style="transform: rotate(50deg);">
+					<path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849"/>
+				</svg>
+				<span class="planet-color">PLANETOURS</span>
+			</a>
+	
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+				<div class="offcanvas-header">
+					<h5 class="planet-title" id="offcanvasNavbarLabel">PLANETOURS</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+						<li class="nav-item">
+							<a class="nav-link mx-lg-2" aria-current="page" href="destinos.html">Destinos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link mx-lg-2" aria-current="page" href="passagens.html"">Passagens</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link mx-lg-2" aria-current="page"  href="hoteis.html">Hotéis</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			
+			<div class="ms-auto d-flex align-items-center">
+                <a href="#" class="btn btn-world me-2 d-none d-lg-block" ><i class="bi bi-globe-americas"></i></a>
+                <a href="#" class="btn btn-one me-2 d-none d-lg-block"><i class="bi bi-heart-fill"></i></a>
+                <a href="login.html" class="btn btn-second d-none d-lg-block"><i class="bi bi-person-circle me-2"></i>Entrar</a>
+				<button class="navbar-toggler pe-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+            </div>
+			</div>
+	
+			
+		</div>
+	</nav>
+
+   
+<hr>
+<hr>
+<hr>
+
+
+    <!-- Pesquisa de hotéis -->
+    <section id="search" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="text-center mb-4">Encontre seu hotel ideal</h2>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="destination" class="form-label">Destino:</label>
+                                    <input type="text" class="form-control" id="destination" placeholder="Digite o destino">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="checkin" class="form-label">Data de check-in:</label>
+                                        <input type="date" class="form-control" id="checkin">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="checkout" class="form-label">Data de check-out:</label>
+                                        <input type="date" class="form-control" id="checkout">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block btn-custom">Pesquisar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lista de hotéis -->
+    <section class="hotels py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="mb-4">Hotéis disponíveis</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="assets/img/hotel-copacabana.jpg" class="card-img-top" alt="Hotel belmond">
+                        <div class="card-body">
+                            <h5 class="card-title">Hotel Belmond Copacabana Palace</h5>
+                            <p class="card-text">Localizado na famosa praia de Copacabana, este hotel de luxo oferece uma experiência única de hospedagem com vistas deslumbrantes para o mar e instalações de primeira classe.</p>
+                            <a href="#" class="btn btn-primary btn-sm btn-custom">Ver detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="assets/img/hotel-fasano.jpg" class="card-img-top" alt="Hotel fasano">
+                        <div class="card-body">
+                            <h5 class="card-title">Hotel Fasano Rio de Janeiro</h5>
+                            <p class="card-text">Localizado no coração de Ipanema, este hotel boutique oferece elegância e conforto em cada detalhe. Desfrute de uma experiência gastronômica excepcional em seus renomados restaurantes.</p>
+                            <a href="#" class="btn btn-primary btn-sm btn-custom">Ver detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="assets/img/hotel-emiliano.jpg" class="card-img-top" alt="Hotel emiliano">
+                        <div class="card-body">
+                            <h5 class="card-title">Hotel Emiliano São Paulo</h5>
+                            <p class="card-text">Localizado no elegante bairro dos Jardins, este hotel oferece uma mistura única de design contemporâneo, serviço excepcional e uma experiência gastronômica premiada.</p>
+                            <a href="#" class="btn btn-primary btn-sm btn-custom">Ver detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="custom-footer text-white  pt-5 pb-4">
+		<div class="container text-md-left">
+
+			<div class="row text-md-lef">
+				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-white">
+						<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 20 20" style="transform: rotate(50deg);">
+							<path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849"/>
+						</svg>
+						<span class="planet-color">PLANETOURS</span>
+					</h5>
+					
+					<p>Bem-vindo à Planetours, a sua passagem para aventuras além dos limites convencionais!</p>
+				</div>
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weigth-bold text-white">Serviços</h5>
+					<p>
+						<a href="destinos.html" class="text-white" style="text-decoration: none;">Destinos</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Passagens</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Hospedagens</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Aluguel de carros</a>
+					</p>
+					
+				</div>
+				
+				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weigth-bold text-white">Informações</h5>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Política de cookies</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Política de privacidade</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Termos de serviço</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Dados da empresa</a>
+					</p>
+
+				</div>
+
+				<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weigth-bold text-white">Contate-nos</h5>
+					<p>
+						<i class="fas fa-home me-3"></i> Manaus, AM, Brasil
+					</p>
+					<p>
+						<i class="fas fa-envelope me-3"></i> info@planetours.com
+					</p>
+					<p>
+						<i class="fas fa-phone me-3"></i> +55 92 994149683
+					</p>
+					<p>
+						<i class="fas fa-phone me-3"></i> +55 92 996554969
+					</p>
+
+
+				</div>
+
+
+			</div>
+			<!-- <hr class="mb-4"> -->
+			<p></p>
+
+
+			<div class="row align-items-md-start justify-content-center">
+				<div class="col-md-7 col-lg-8">
+					<p>&copy; Planetours 2024 all rigths reserved by:
+						<a href="#" style="text-decoration: none;">
+							<strong class="text-white">The providers</strong>
+						</a>
+					</p>
+				</div>
+				
+				<!-- Outras divs aqui -->
+				<div class="col-md-5 col-lg-4 text-center text-md-rigth">
+					<div class="text-center text-md-rigth">
+						<ul class="list-unstyled list-inline">
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+							</li>
+
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+							</li>
+
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-instagram"></i></a>
+							</li>
+
+							<li class="list-inline-item">
+								<b><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a></b>
+							</li>
+
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+							</li>
+
+
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			
+
+		</div>
+
+	</footer>
+
+    <script src="script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script> 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <title>Destinos</title>
+    <style>
+        /* Estilos personalizados */
+        .navbar-brand img {
+            max-height: 40px;
+            margin-right: 10px;
+        }
+        .destino-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            margin-bottom: 20px; /* Adiciona margem inferior para separar os cards */
+        }
+        .destino-card:hover {
+            transform: scale(1.05);
+        }
+        .destino-card img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand me-auto" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 20 20" style="transform: rotate(50deg);">
+                    <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849"/>
+                </svg>
+                <span class="planet-color">PLANETOURS</span>
+            </a>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="planet-title" id="offcanvasNavbarLabel">PLANETOURS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+						<li class="nav-item">
+							<a class="nav-link mx-lg-2" aria-current="page" href="destinos.html">Destinos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link mx-lg-2" aria-current="page" href="passagens.html"">Passagens</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link mx-lg-2" aria-current="page"  href="hoteis.html">Hotéis</a>
+						</li>
+						
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="ms-auto d-flex align-items-center">
+                <a href="#" class="btn btn-world me-2 d-none d-lg-block" ><i class="bi bi-globe-americas"></i></a>
+                <a href="#" class="btn btn-one me-2 d-none d-lg-block"><i class="bi bi-heart-fill"></i></a>
+                <a href="login.html" class="btn btn-second d-none d-lg-block"><i class="bi bi-person-circle me-2"></i>Entrar</a>
+				<button class="navbar-toggler pe-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+            </div>
+            </div>
+
+            
+        </div>
+    </nav>
+
+
+    <section class="destinos section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- Destino 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card destino-card">
+                        <img src="assets/img/paris.jpg" class="card-img-top" alt="Paris">
+                        <div class="card-body">
+                            <h5 class="card-title">Paris, França</h5>
+                            <p class="card-text">Descubra a cidade do amor e suas maravilhas arquitetônicas.</p>
+                            <a href="#" class="btn btn-primary btn-custom">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Destino 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card destino-card">
+                        <img src="assets/img/indonesia.jpg" class="card-img-top" alt="indonesia">
+                        <div class="card-body">
+                            <h5 class="card-title">Bali, Indonésia</h5>
+                            <p class="card-text">Relaxe nas praias paradisíacas e explore a cultura balinesa.</p>
+                            <a href="#" class="btn btn-primary btn-custom">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Destino 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card destino-card">
+                        <img src="assets/img/tokyo.jpg" class="card-img-top" alt="tokyo">
+                        <div class="card-body">
+                            <h5 class="card-title">Tóquio, Japão</h5>
+                            <p class="card-text">Explore a cidade mais futurista do mundo e mergulhe na cultura japonesa.</p>
+                            <a href="#" class="btn btn-primary btn-custom">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Destino 4 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card destino-card">
+                        <img src="assets/img/nova york.jpg" class="card-img-top" alt="Nova York">
+                        <div class="card-body">
+                            <h5 class="card-title">Nova York, EUA</h5>
+                            <p class="card-text">A cidade que nunca dorme, repleta de cultura, arte e arranha-céus.</p>
+                            <a href="#" class="btn btn-primary btn-custom">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Destino 5 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card destino-card">
+                        <img src="assets/img/rio de janeiro.jpg" class="card-img-top" alt="Rio de janeiro">
+                        <div class="card-body">
+                            <h5 class="card-title">Rio de Janeiro, Brasil</h5>
+                            <p class="card-text">Conheça as praias deslumbrantes e a energia contagiante desta cidade maravilhosa.</p>
+                            <a href="#" class="btn btn-primary btn-custom">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Destino 6 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card destino-card">
+                        <img src="assets/img/barcelona.jpeg" class="card-img-top" alt="Barcelona">
+                        <div class="card-body">
+                            <h5 class="card-title">Barcelona, Espanha</h5>
+                            <p class="card-text">Mistura de arquitetura moderna e histórica, com praias ensolaradas.</p>
+                            <a href="#" class="btn btn-primary btn-custom">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Adicionando mais destinos -->
+                <!-- Destino 7 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card destino-card">
+                        <img src="assets/img/londres.jpg" class="card-img-top" alt="Londres">
+                        <div class="card-body">
+                            <h5 class="card-title">Londres, Reino Unido</h5>
+                            <p class="card-text">Explore a história rica e a cultura vibrante da capital do Reino Unido.</p>
+                            <a href="#" class="btn btn-primary btn-custom">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Destino 8 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card destino-card">
+                        <img src="assets/img/sydney.jpg" class="card-img-top" alt="Australia">
+                        <div class="card-body">
+                            <h5 class="card-title">Sydney, Austrália</h5>
+                            <p class="card-text">Descubra a beleza natural e a vida urbana animada de Sydney.</p>
+                            <a href="#" class="btn btn-primary btn-custom">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Destino 9 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card destino-card">
+                        <img src="assets/img/egito.jpg" class="card-img-top" alt="Egito">
+                        <div class="card-body">
+                            <h5 class="card-title">Cairo, Egito</h5>
+                            <p class="card-text">Explore a antiga civilização egípcia e suas maravilhas arqueológicas.</p>
+                            <a href="#" class="btn btn-primary btn-custom">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+	<footer class="custom-footer text-white  pt-5 pb-4">
+		<div class="container text-md-left">
+
+			<div class="row text-md-lef">
+				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-white">
+						<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 20 20" style="transform: rotate(50deg);">
+							<path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849"/>
+						</svg>
+						<span class="planet-color">PLANETOURS</span>
+					</h5>
+					
+					<p>Bem-vindo à Planetours, a sua passagem para aventuras além dos limites convencionais!</p>
+				</div>
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weigth-bold text-white">Serviços</h5>
+					<p>
+						<a href="destinos.html" class="text-white" style="text-decoration: none;">Destinos</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Passagens</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Hospedagens</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Aluguel de carros</a>
+					</p>
+					
+				</div>
+				
+				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weigth-bold text-white">Informações</h5>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Política de cookies</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Política de privacidade</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Termos de serviço</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;">Dados da empresa</a>
+					</p>
+
+				</div>
+
+				<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weigth-bold text-white">Contate-nos</h5>
+					<p>
+						<i class="fas fa-home me-3"></i> Manaus, AM, Brasil
+					</p>
+					<p>
+						<i class="fas fa-envelope me-3"></i> info@planetours.com
+					</p>
+					<p>
+						<i class="fas fa-phone me-3"></i> +55 92 994149683
+					</p>
+					<p>
+						<i class="fas fa-phone me-3"></i> +55 92 996554969
+					</p>
+
+
+				</div>
+
+
+			</div>
+			<!-- <hr class="mb-4"> -->
+			<p></p>
+
+
+			<div class="row align-items-md-start justify-content-center">
+				<div class="col-md-7 col-lg-8">
+					<p>&copy; Planetours 2024 all rigths reserved by:
+						<a href="#" style="text-decoration: none;">
+							<strong class="text-white">The providers</strong>
+						</a>
+					</p>
+				</div>
+				
+				<!-- Outras divs aqui -->
+				<div class="col-md-5 col-lg-4 text-center text-md-rigth">
+					<div class="text-center text-md-rigth">
+						<ul class="list-unstyled list-inline">
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+							</li>
+
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+							</li>
+
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-instagram"></i></a>
+							</li>
+
+							<li class="list-inline-item">
+								<b><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a></b>
+							</li>
+
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+							</li>
+
+
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			
+
+		</div>
+
+	</footer>
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

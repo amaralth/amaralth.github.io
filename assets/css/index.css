@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet');
+* {
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	background: #f1fbff;
+}
+.section-padding {
+	padding: 100px 0;
+}
+.carousel-item {
+	height: 100vh;
+	min-height: 300px;
+}
+.carousel-caption {
+	bottom: 220px;
+	z-index: 2;
+}
+.carousel-caption h5 {
+	font-size: 45px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-top: 25px;
+}
+.carousel-caption p {
+	width: 60%;
+	margin: auto;
+	font-size: 18px;
+	line-height: 1.9;
+}
+.carousel-inner:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 1;
+}
+
+.navbar-nav a {
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.navbar-light .navbar-brand {
+	color: #fff2da;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+	color: #fff2da;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #fff2da;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: #fff2da;
+}
+.w-100 {
+	height: 100vh;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.carousel-caption {
+		bottom: 370px;
+	}
+	.carousel-caption p {
+		width: 100%;
+	}
+	.card {
+		margin-bottom: 30px;
+	}
+	.img-area img {
+		width: 100%;
+		
+	}
+}
+@media only screen and (max-width: 767px) {
+	.navbar-nav {
+		text-align: center;
+	}
+	.carousel-caption {
+		bottom: 125px;
+	}
+	.carousel-caption h5 {
+		font-size: 17px;
+	}
+	.carousel-caption a {
+		padding: 10px 15px;
+		font-size: 15px;
+	}
+	.carousel-caption p {
+		width: 100%;
+		line-height: 1.6;
+		font-size: 12px;
+	}
+	.about-text {
+		padding-top: 50px;
+	}
+	.card {
+		margin-bottom: 30px;
+	}
+}
+
+
+
+
+
+.navbar {
+	background-color: #874c3f;
+	height: 70px;
+	
+}
+
+
+
+.navbar-brand {
+	font-weight: 500;
+	color: #fff;
+	font-size: 24px;
+	transition: 0.3s color;
+}
+
+
+
+
+.planet-color{
+	font-size: 25px;
+}
+
+.planet-color:hover {
+	
+	color: #fff;
+	text-decoration: none;
+	transition: 0.3s background-color;	
+}
+
+
+
+.planet-title { /*da aba*/
+	color: #874c3f; /*não mudar*/
+
+}
+
+
+.offcanvas-body {
+	background-color: #874c3f; /* Cor de fundo do corpo da aba */
+    color: #ffe3b0; /* Cor do texto do corpo da aba */
+}
+
+
+
+/*bota de fechar aba*/
+.btn-close {
+	background-color: #fff; /* não mudar*/
+	color: black;
+	
+}
+
+/*botao de menu*/
+
+.navbar-toggler {
+	
+	font-size: 18px;
+	line-height: 0.3;
+	background-color: #874c3f;
+	border-color: #fff;
+	color: #fff;
+
+}
+
+
+.navbar-toggler:hover{
+	background-color: #a57667;	
+	color: #fff;
+}
+
+
+.navbar-toggler:focus, btn-close:focus {
+	box-shadow: none;
+	outline: none;
+}
+
+.nav-link {
+	color: white;
+	font-weight: 500;
+	position: relative;
+}
+.nav-link:hover {
+	color: #fff2da;
+
+}
+
+@media (min-width: 991px){
+	.nav-link::before{
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0%;
+		height: 2px;
+		background-color: #fff; /* cor que vai ficar quando passar o cursor num item da nav principal*/ 
+		visibility: hidden;
+		transition: 0.3s ease-in-out;
+
+	}
+
+	.nav-link:hover::before, .nav-link.active::before {
+		width: 100%;
+		visibility: visible;
+	}
+}
+
+
+
+/* CARDS */
+
+
+.card {
+    border-radius: 25px; /* Arredondamento das bordas da carta */
+    overflow: hidden; /* Ocultar conteúdo extra */
+	background-color: #a57667;
+	border: none;
+	color: #fff;
+	transition: transform 0.3s;
+	
+}
+
+.card:hover {
+	transform: scale(1.05);
+}
+
+.card img {
+	max-height: 300px;
+	object-fit: cover;
+}
+
+
+
+
+/* BOTOES */
+
+/* botão de coração */
+.btn-one {
+    background-color: #874c3f; /* Cor de fundo personalizada */
+    border-color: #fff; /* Cor da borda personalizada */
+    color: #ffffff; /* Cor do texto personalizada */
+	text-decoration: none;
+	transition: 0.3s background-color;	
+}
+
+/* botao de coração */ 
+.btn-one:hover {
+	background-color: #a57667;	
+	color: #fff;
+
+}
+
+/* botão de login */
+.btn-second {
+    background-color: #874c3f; /* Cor de fundo personalizada */
+    border-color: #fff; /* Cor da borda personalizada */
+    color: #fff; /* Cor do texto personalizada */
+	text-decoration: none;
+	transition: 0.3s background-color;	
+}
+
+/* botao de login */ 
+.btn-second:hover {
+	background-color: #a57667;	
+	color: #fff;
+	
+}
+
+
+/* botao do globo */ 
+.btn-world {
+    background-color: #874c3f; /* Cor de fundo personalizada */
+    border-color: #fff; /* Cor da borda personalizada */
+    color: #fff; /* Cor do texto personalizada */
+	text-decoration: none;
+	transition: 0.3s background-color;	
+}
+
+/* botao do globo */ 
+.btn-world:hover {
+	background-color: #a57667;	
+	color: #fff;
+	
+}
+
+/* FOOTER */
+.custom-footer {
+    background-color: #874c3f;
+    color: white; /* Define a cor do texto para branco */
+    
+}
+
+ /*Botoes destinos*/
+
+.btn-custom {
+    background-color: #fff; 
+    border-color: #fff; 
+	color: #874c3f;
+}
+
+
+.btn-custom:hover {
+    background-color: #a57667; 
+    border-color: #fff; 
+	color: #fff;
+
+}
+
+.btn-estilizar {      /*a classe de origem era btn-warning. Botoes do carousel*/
+	/*background-color: #f0a88b;*/
+	background-color: #874c3f; 
+	color: #fff;
+	text-decoration: none;
+	transition: 0.3s background-color;	
+}
+
+.btn-estilizar:hover {
+	background-color: #a57667;
+	
+}
+
