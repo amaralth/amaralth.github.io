@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delícias Shalom - Controle de Vendas Junino</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.png" alt="Logo Delícias Shalom">
+            </div>
+            <h1>Delícias Shalom</h1>
+            <p>Controle de Vendas da Barraca Junina</p>
+            <div class="menu-icon" id="menuIcon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <nav id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" class="closebtn" id="closeMenu">&times;</a>
+        <div class="menu-sections">
+            <div class="menu-section">
+                <h4>Navegação Rápida</h4>
+                <hr>
+                <ul>
+                    <li><a href="#registrar-venda">Registrar Venda</a></li>
+                    <li><a href="#resumo-diario">Resumo do Dia</a></li>
+                    <li><a href="#registrar-gasto">Registrar Gasto</a></li>
+                    <li><a href="#historico-registros">Histórico</a></li>
+                    <li><a href="#controle-gastos-total">Gastos Totais</a></li>
+                    <li><a href="#gerenciar-cardapio">Gerenciar Cardápio</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="dia-status">
+            <button id="btnComecarDia">Começar Novo Dia</button>
+            <button id="btnFinalizarDia">Finalizar Dia de Vendas</button>
+        </section>
+
+        <section id="registrar-venda">
+            <h2>Registrar Nova Venda</h2>
+            <form id="formVenda">
+                <label for="produto">Produto Vendido:</label>
+                <select id="produto" required>
+                    </select>
+
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" min="1" value="1" required>
+
+                <label for="pagamento">Forma de Pagamento:</label>
+                <select id="pagamento" required>
+                    <option value="">Selecione a forma de pagamento</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Crédito">Cartão de Crédito</option>
+                    <option value="Débito">Cartão de Débito</option>
+                    <option value="Pix">Pix</option>
+                </select>
+
+                <label for="valorTotal">Valor Unitário (R$):</label>
+                <input type="number" id="valorUnitario" min="0.01" step="0.01" required>
+                
+                <button type="submit">Registrar Venda</button>
+            </form>
+        </section>
+
+        <section id="registrar-gasto">
+            <h2>Registrar Gasto</h2>
+            <form id="formGasto">
+                <label for="gastoCategoria">Categoria:</label>
+                <select id="gastoCategoria" required>
+                    <option value="">Selecione a categoria</option>
+                    <option value="Comidas">Comidas</option>
+                    <option value="Uber">Uber</option>
+                    <option value="Pessoas Trabalhando">Pessoas Trabalhando</option>
+                    <option value="Compras no Evento/Outras Barracas">Compras no Evento/Outras Barracas</option>
+                    <option value="Outros">Outros</option>
+                </select>
+
+                <label for="gastoDescricao">Descrição:</label>
+                <input type="text" id="gastoDescricao" required>
+
+                <label for="gastoValor">Valor (R$):</label>
+                <input type="number" id="gastoValor" min="0.01" step="0.01" required>
+
+                <button type="submit">Registrar Gasto</button>
+            </form>
+        </section>
+
+        <section id="gerenciar-cardapio">
+            <h2>Gerenciar Cardápio</h2>
+            <form id="formGerenciarCardapio">
+                <label for="novoPratoNome">Nome do Novo Prato:</label>
+                <input type="text" id="novoPratoNome" required>
+                <label for="novoPratoPreco">Preço (R$):</label>
+                <input type="number" id="novoPratoPreco" min="0.01" step="0.01" required>
+                <button type="submit">Adicionar Prato</button>
+            </form>
+            <div id="listaCardapio">
+                <h3>Itens Atuais:</h3>
+                <ul id="cardapioList">
+                    </ul>
+            </div>
+        </section>
+
+
+        <section id="resumo-diario">
+            <h2>Meu Resumo Junino - <span id="dataResumo"></span></h2>
+            <p id="resumoDiaAnterior" style="font-style: italic; font-size: 0.9em; text-align: center; color: #666;"></p>
+            <div class="resumo-grid">
+                <div class="resumo-item">
+                    <h3>Vendas Totais do Dia:</h3>
+                    <p id="totalVendasDia">R$ 0,00</p>
+                </div>
+                <div class="resumo-item">
+                    <h3>Itens Vendidos:</h3>
+                    <p id="totalItensVendidos">0 unidades</p>
+                </div>
+            </div>
+
+            <h3>Vendas por Forma de Pagamento:</h3>
+            <div class="resumo-pagamento">
+                <p>Dinheiro: <span id="vendasDinheiro">R$ 0,00</span></p>
+                <p>Crédito: <span id="vendasCredito">R$ 0,00</span></p>
+                <p>Débito: <span id="vendasDebito">R$ 0,00</span></p>
+                <p>Pix: <span id="vendasPix">R$ 0,00</span></p>
+            </div>
+
+            <h3>Gastos do Dia:</h3>
+            <div class="resumo-gastos">
+                <p>Total de Gastos: <span id="totalGastosDia">R$ 0,00</span></p>
+                <p>Gastos com Uber: <span id="gastosUberDia">R$ 0,00</span></p>
+            </div>
+
+            <div class="resumo-lucro">
+                <h3>LUCRO LÍQUIDO DO DIA:</h3>
+                <p id="lucroLiquidoDia">R$ 0,00</p>
+            </div>
+        </section>
+
+        <section id="relatorio-final-dia" style="display:none;">
+            <h2>Relatório Final do Dia: <span id="dataRelatorioFinal"></span></h2>
+            <h3>Vendas Detalhadas:</h3>
+            <p>Total Geral: <span id="relatorioTotalVendas">R$ 0,00</span></p>
+            <p>Dinheiro: <span id="relatorioDinheiro">R$ 0,00</span></p>
+            <p>Crédito: <span id="relatorioCredito">R$ 0,00</span></p>
+            <p>Débito: <span id="relatorioDebito">R$ 0,00</span></p>
+            <p>Pix: <span id="relatorioPix">R$ 0,00</span></p>
+            <p>Total de Gastos: <span id="relatorioTotalGastos">R$ 0,00</span></p>
+            <p>Lucro Líquido: <span id="relatorioLucro">R$ 0,00</span></p>
+            <button id="btnVoltarAoControle">Voltar ao Controle</button>
+        </section>
+
+        <section id="historico-registros">
+            <h2>Histórico de Registros (Último Mês)</h2>
+            <div class="historico-filtros">
+                <label for="filtroDataHistorico">Selecionar Data:</label>
+                <input type="date" id="filtroDataHistorico">
+                <button id="btnLimparFiltroHistorico">Ver Tudo</button>
+            </div>
+            <div id="historicoResultados">
+                <h3>Vendas:</h3>
+                <ul id="listaHistoricoVendas">
+                    </ul>
+                <h3>Gastos:</h3>
+                <ul id="listaHistoricoGastos">
+                    </ul>
+            </div>
+        </section>
+
+        <section id="controle-gastos-total">
+            <h2>Controle Total de Gastos</h2>
+            <p>Total de Gastos Acumulados: <span id="totalGastosAcumulados">R$ 0,00</span></p>
+            <p>Visualizando gastos desde: <span id="primeiroRegistroGasto">N/A</span></p>
+            <h3>Todos os Gastos Registrados:</h3>
+            <ul id="listaTodosGastos">
+                </ul>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-section">
+            <h4>Vendas</h4>
+            <hr>
+            <ul>
+                <li><a href="#registrar-venda">Registrar Nova Venda</a></li>
+                <li><a href="#resumo-diario">Ver Resumo do Dia</a></li>
+                <li><a href="#relatorio-final-dia">Relatório Final do Dia</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Gastos</h4>
+            <hr>
+            <ul>
+                <li><a href="#registrar-gasto">Registrar Gasto</a></li>
+                <li><a href="#controle-gastos-total">Controle Total de Gastos</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Gerenciamento</h4>
+            <hr>
+            <ul>
+                <li><a href="#gerenciar-cardapio">Gerenciar Cardápio</a></li>
+                <li><a href="#historico-registros">Buscar Relatórios</a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <hr>
+            <p>&copy; 2025 Delícias Shalom. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
